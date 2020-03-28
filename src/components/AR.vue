@@ -25,10 +25,7 @@
 
 <script>
 export default {
-  name: "AR",
-  created() {
-    console.log("careated");
-  }
+  name: "AR"
 };
 </script>
 
