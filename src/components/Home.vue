@@ -33,7 +33,14 @@ export default {
           this.currentLocation.longitude = longitude;
         }.bind(this),
         function(err) {
-          console.log("err: ", err);
+          switch (err.code) {
+            case 1:
+              alert("位置情報の利用が許可されていません。");
+              break;
+            default:
+              alert("予期せぬ理由で位置情報の取得に失敗しました。");
+              break;
+          }
         }
       );
     }
